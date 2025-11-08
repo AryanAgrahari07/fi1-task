@@ -7,7 +7,6 @@
 ### Steps to Run
 
 Clone the repository and move into the backend folder:
-```bash
 cd backend
 npm install
 Create a .env file in the backend directory:
