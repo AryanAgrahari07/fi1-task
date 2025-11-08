@@ -17,8 +17,11 @@ app.use(express.json());
 app.use("/api/products", productRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.error(err));
+.then(()=> {
+    console.log("Database connected");
+}).catch((e)=> {
+    console.log(e);
+});
 
 app.get("/", (req, res) => res.send("API running..."));
 
