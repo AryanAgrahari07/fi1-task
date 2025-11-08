@@ -1,0 +1,73 @@
+/* ===== Page Container ===== */
+.product-list-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.product-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.3rem;
+}
+
+.product-subheading {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ===== Grid Layout ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 0 0.5rem;
+}
+
+.no-products {
+  grid-column: 1 / -1;
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-top: 2rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .product-grid {
+    gap: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-heading {
+    font-size: 1.6rem;
+  }
+  .product-subheading {
+    font-size: 0.95rem;
+  }
+  .product-grid {
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list-container {
+    padding: 1.5rem 0.8rem;
+  }
+  .product-heading {
+    font-size: 1.3rem;
+  }
+  .product-subheading {
+    font-size: 0.9rem;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
